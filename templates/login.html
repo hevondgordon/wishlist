@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flask Wishlist</title>
+	<link rel="stylesheet" type="text/css" href="../static/materialize/css/materialize.css">
+</head>
+<body>
+
+	{% from "_formhelpers.html" import render_field %}
+	<div class="row">
+	<div class="col l4">&nbsp</div>
+
+
+
+
+<!--container with all of the form elements  -->
+
+		<div class="col s12 l4 holder">
+		<center>
+		
+				{{notUser}}
+
+			<form action="#" method="post">
+				{{render_field(form.username)}}
+				<br>
+				{{render_field(form.password)}}
+				<input type="submit" value="Login" class="btn stretch"/>
+				<p class="stretch pretty">No account as yet? <a href="/">sign up to continue</a></p>
+			</form>
+		</center>
+		</div>
+<!--container with all of the form elements  -->
+
+
+
+
+
+
+
+	<div class="col l4">&nbsp</div>
+		
+	</div>
+	
+	<style type="text/css">
+	.holder{
+		margin-top: 250px;
+	}
+	.stretch{
+		width:350px;
+		margin-left: 40px;
+	}
+	.pretty{
+		font-color:gray;
+
+	}
+
+	</style>
+
+
+</body>
+</html>

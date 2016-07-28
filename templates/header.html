@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='materialize/css/materialize.css') }}">
+  <title></title>
+</head>
+<body>
+<nav>
+    <div class="nav-wrapper">
+    <div class="container">
+      <a href="{{url_for('wishlist',id=userid)}}" class="brand-logo">{{user}}'s Wishlist</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="{{url_for('login')}}">Logout</a></li>
+        <li><a href="{{url_for('addtowishlist',id=userid)}}">Add Wish</a></li>
+        <li><a href="collapsible.html">Delete Wish</a></li>
+        <li><a href="collapsible.html">Share Wish</a></li>
+      </ul>
+     </div>
+    </div>
+  </nav>
+</body>
+</html>

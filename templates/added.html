@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='materialize/css/materialize.css') }}">
+	
+	<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+</head>
+<body>
+{% include 'header.html' %}
+{% from "_formhelpers.html" import render_field %}
+
+
+
+<div class="row">
+		<center>
+		<div class="styling"> {{success}}</div>
+		</center>
+		<div class="col l3">&nbsp</div>
+		
+			<div class="col s12 m7 l6">
+	          <div class="card">
+	            <div class="card-image">
+	              <img src="{{href}}">
+	              <span class="card-title">Add to your wishlist</span>
+	            </div>
+	             <form method="POST" action="#">
+	            <div class="card-content">
+				{{render_field(form.category)}}
+	            {{render_field(form.description)}}
+	            {{render_field(form.quantity)}}
+	          
+	            </div>
+	            <div class="card-action">
+	            <center>
+	            
+	            	 <input type="submit" value="Save Wish" class="btn">
+	           
+	             
+	              </center>
+	            </div>
+	            </form>
+	          </div>
+	        </div>
+        <div class="col l3">&nbsp</div>
+
+</div>
+
+
+
+
+
+<style type="text/css">
+	.styling{
+		color:green;
+		font-size: 40px;
+		font-family: 'Slabo 27px', serif;
+
+	}
+	div .glyph{
+		font-size:60px;
+	}
+</style>
+
+</body>
+</html>

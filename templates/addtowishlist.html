@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flask Wishlist</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='materialize/css/materialize.css') }}">
+</head>
+<body>
+	{% include 'header.html' %}
+	{% from "_formhelpers.html" import render_field %}
+	
+	
+  <br>
+	<div class="container">
+	<center>
+	<form action="#" method="POST" >
+	
+		{{render_field(form.query)}}
+		
+		<input type="submit" value="Wish" class="btn">
+	</form>
+	<br>
+	
+	{{found}}
+	<form method="POST" action="#">
+	<div class="row">
+	{% for i in thumbs%}
+
+		
+        <div class="col s12 m7 l6">
+          <div class="card">
+            <div class="card-image">
+              <img src="{{i}}">
+              <span class="card-title">Add to your wishlist</span>
+            </div>
+            <div class="card-content">
+            </div>
+            <div class="card-action">
+              <a href="{{url_for('added',href=i,id=userid)}}">Add to wishlist</a>
+            </div>
+          </div>
+        </div>
+
+        
+	{%endfor%}
+	 </div>
+	 </form>
+		
+
+	</center>
+		 
+	</div>
+ 
+
+	<div class="row">
+	
+		
+	</div>
+
+
+
+	
+	<style type="text/css">
+	
+	</style>
+
+
+</body>
+</html>
